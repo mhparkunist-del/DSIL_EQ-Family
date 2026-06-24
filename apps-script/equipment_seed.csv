@@ -1,0 +1,17 @@
+equipmentId,name,category,subCategory,location,status,currentReservationId,manager,note,updatedAt
+EQ001,전계방출 주사전자현미경(FE-SEM),현미경,SEM,1동 101호,available,,김도현,,2026-06-24
+EQ002,투과전자현미경(TEM),현미경,TEM,1동 103호,available,,이수민,,2026-06-24
+EQ003,원자간력현미경(AFM),현미경,AFM,1동 105호,available,,박지훈,,2026-06-24
+EQ004,광학현미경,현미경,Optical,1동 107호,available,,최유진,,2026-06-24
+EQ005,X-선 회절분석기(XRD),분석·측정,XRD,2동 201호,available,,정민석,,2026-06-24
+EQ006,라만 분광기,분석·측정,Raman,2동 203호,available,,강하늘,,2026-06-24
+EQ007,UV-Vis 분광광도계,분석·측정,UV-Vis,2동 205호,available,,윤서연,,2026-06-24
+EQ008,엘립소미터(박막두께측정),분석·측정,Ellipsometer,2동 207호,maintenance,,조태현,,2026-06-24
+EQ009,표면조도측정기(Profilometer),분석·측정,Profilometer,2동 209호,available,,한지원,,2026-06-24
+EQ010,RF 마그네트론 스퍼터,증착,Sputter,3동 B101,available,,임재호,,2026-06-24
+EQ011,전자빔 증착장비(E-beam Evaporator),증착,E-beam,3동 B103,available,,오세영,,2026-06-24
+EQ012,PECVD 박막증착장비,증착,PECVD,3동 B105,available,,신동욱,,2026-06-24
+EQ013,반응성이온식각장비(RIE),식각,RIE,3동 B107,available,,권나래,,2026-06-24
+EQ014,마스크 얼라이너(노광장비),리소그래피,Aligner,3동 B109,available,,배성훈,,2026-06-24
+EQ015,스핀코터,리소그래피,Spin Coater,3동 B109,available,,배성훈,,2026-06-24
+EQ016,급속열처리장비(RTA),열처리,RTA,3동 B111,available,,문가영,,2026-06-24
