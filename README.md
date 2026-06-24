@@ -1,37 +1,50 @@
-# EQUIMENT 홈페이지
+# KAIST DSIL 장비 예약 플랫폼
 
-산업용 장비 전문기업을 위한 간단한 정적 웹사이트 예시입니다.
-순수 HTML / CSS / JavaScript로만 구성되어 별도의 빌드 과정이 없습니다.
+KAIST DSIL 공용 장비의 예약 · 사용 실적을 관리하는 웹 플랫폼입니다.
+**핵심 규칙: 공정(사용) 후 실적/로그를 입력해야 같은 장비를 다시 예약할 수 있습니다.**
+(실적 미입력 시 장비가 잠겨 아무도 사용할 수 없음 → 실적 누락 구조적 방지)
 
-## 구성
+## 페이지
 
-| 파일 | 설명 |
-|------|------|
-| `index.html` | 페이지 구조 (헤더, 히어로, 제품, 회사소개, 문의, 푸터) |
-| `style.css`  | 스타일 및 반응형 레이아웃 |
-| `script.js`  | 모바일 메뉴 토글, 문의 폼 동작 |
+| 페이지 | 파일 | 설명 |
+|--------|------|------|
+| 장비예약 / 실적입력 | `index.html` | 장비 목록·예약 신청·실적 입력 |
+| 장비예약현황 조회 | `status.html` | 장비 상태 + 전체 예약 현황/필터 |
+| 관리자 모드 | `admin.html` | 비번 `0000`. 장비 등록, 사용 횟수, 유저 권한 관리, 강제 잠금해제 |
+
+## 동작 방식 (2가지 모드)
+
+- **DEMO 모드 (기본값)** — `js/config.js` 의 `API_URL` 이 비어있으면 브라우저(localStorage)에
+  데이터를 저장하며 모든 화면이 동작합니다. **GitHub Pages에 올리면 바로 시연 가능**합니다.
+  (단, 같은 브라우저에서만 데이터 공유 — 여러 사람 실제 공유는 LIVE 모드 필요)
+- **LIVE 모드** — Google Sheets를 DB로, Google Apps Script를 API 서버로 사용합니다.
+  여러 사용자가 실제로 예약을 공유합니다. 설정 방법은 [`SETUP.md`](SETUP.md) 참고.
+
+## 기술
+
+순수 HTML / CSS / JavaScript (빌드 과정 없음). 백엔드는 Google Apps Script(`apps-script/Code.gs`).
+
+## 데모 계정 (DEMO 모드)
+
+- 일반 사용자: 처음 보는 이름으로 예약하면 자동 등록됩니다. (예: 이름 `홍길동`, 비번 `1234`)
+- 관리자 모드 진입 비번: `0000`
 
 ## 로컬에서 보기
 
-`index.html` 파일을 브라우저로 직접 열면 됩니다.
-또는 간단한 로컬 서버를 띄울 수 있습니다.
-
 ```bash
-# Python 3
 python3 -m http.server 8000
-# 브라우저에서 http://localhost:8000 접속
+# http://localhost:8000 접속
 ```
 
-## GitHub Pages로 배포하기
+## 폴더 구조
 
-1. GitHub에서 새 저장소를 만듭니다.
-2. 이 폴더를 push 합니다 (아래 명령 참고).
-3. 저장소 **Settings → Pages** 로 이동합니다.
-4. **Source**를 `main` 브랜치 / `root`로 설정하고 저장합니다.
-5. 잠시 후 `https://<사용자명>.github.io/<저장소명>/` 에서 사이트가 공개됩니다.
-
-```bash
-git remote add origin https://github.com/<사용자명>/<저장소명>.git
-git branch -M main
-git push -u origin main
+```
+index.html / status.html / admin.html   # 3개 페이지
+css/style.css                           # KAIST DSIL 네이비 테마
+js/config.js                            # 설정(오너만 수정): API_URL, 시크릿, 관리자 비번
+js/api.js / api.live.js / api.demo.js   # API 어댑터(live/demo 자동 선택)
+js/ui.js                                # 공통 레이아웃·뱃지·토스트
+js/reserve.js / status.js / admin.js    # 페이지 로직
+apps-script/Code.gs                     # Google Apps Script 백엔드(LIVE용)
+SETUP.md                                # 구글 시트 + 웹앱 연동 가이드
 ```

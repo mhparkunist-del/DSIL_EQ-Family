@@ -2,3 +2,7 @@
 Thumbs.db
 node_modules/
 *.log
+
+# 개인 참고 스크린샷 (커밋 제외)
+Reference/
+.claude/
