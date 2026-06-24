@@ -8,7 +8,7 @@ const MENU = [
   { href: "admin.html", label: "관리자 모드" },
 ];
 
-const TOP_TABS = ["연구장비", "장비교육·지원", "지식재산", "학부공용장비"];
+const TOP_TABS = ["연구장비"];
 
 /** 현재 페이지 파일명 */
 function currentPage() {
