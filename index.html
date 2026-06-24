@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이큅먼트 | 산업용 장비 전문기업</title>
+  <meta name="description" content="신뢰할 수 있는 산업용 장비 공급 및 유지보수 전문기업" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 헤더 -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo">EQUI<span>MENT</span></a>
+      <nav class="nav" id="nav">
+        <a href="#home">홈</a>
+        <a href="#products">제품</a>
+        <a href="#about">회사소개</a>
+        <a href="#contact">문의</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">☰</button>
+    </div>
+  </header>
+
+  <!-- 히어로 -->
+  <section class="hero" id="home">
+    <div class="container hero__inner">
+      <h1>최고의 산업용 장비<br />파트너</h1>
+      <p>안정적인 공급과 빠른 유지보수로 비즈니스의 가동률을 높입니다.</p>
+      <a href="#products" class="btn">제품 살펴보기</a>
+    </div>
+  </section>
+
+  <!-- 제품 -->
+  <section class="section" id="products">
+    <div class="container">
+      <h2 class="section__title">주요 제품</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="card__icon">⚙️</div>
+          <h3>정밀 가공기</h3>
+          <p>고정밀 CNC 가공 솔루션으로 생산성을 극대화합니다.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🏗️</div>
+          <h3>중장비</h3>
+          <p>현장에 최적화된 견고하고 안전한 중장비를 공급합니다.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🔧</div>
+          <h3>유지보수</h3>
+          <p>24시간 신속 대응 정비 서비스를 제공합니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 회사소개 -->
+  <section class="section section--alt" id="about">
+    <div class="container about">
+      <div class="about__text">
+        <h2 class="section__title">회사소개</h2>
+        <p>
+          이큅먼트는 20년 이상 산업용 장비 분야에서 축적한 노하우를 바탕으로
+          고객에게 신뢰할 수 있는 솔루션을 제공합니다.
+        </p>
+        <ul class="stats">
+          <li><strong>20+</strong><span>업력(년)</span></li>
+          <li><strong>500+</strong><span>고객사</span></li>
+          <li><strong>24h</strong><span>긴급 대응</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 문의 -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section__title">문의하기</h2>
+      <form class="form" id="contactForm">
+        <input type="text" placeholder="이름" required />
+        <input type="email" placeholder="이메일" required />
+        <textarea placeholder="문의 내용" rows="4" required></textarea>
+        <button type="submit" class="btn">보내기</button>
+      </form>
+      <p class="form__msg" id="formMsg"></p>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 EQUIMENT. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
