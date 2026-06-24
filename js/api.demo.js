@@ -10,11 +10,22 @@
     const now = Date.now();
     return {
       equipment: [
-        eq("EQ001", "전계방출 주사전자현미경(FE-SEM)", "현미경", "SEM", "1동 101호", "available", "김연구"),
-        eq("EQ002", "X-선 회절분석기(XRD)", "분석기", "XRD", "1동 102호", "available", "박교수"),
-        eq("EQ003", "원자력간현미경(AFM)", "현미경", "AFM", "2동 201호", "available", "이박사"),
-        eq("EQ004", "열중량분석기(TGA)", "분석기", "TGA", "2동 203호", "maintenance", "최연구"),
-        eq("EQ005", "스퍼터 증착장비", "증착", "Sputter", "3동 B1", "available", "정연구"),
+        eq("EQ001", "전계방출 주사전자현미경(FE-SEM)", "현미경", "SEM", "1동 101호", "available", "김도현"),
+        eq("EQ002", "투과전자현미경(TEM)", "현미경", "TEM", "1동 103호", "available", "이수민"),
+        eq("EQ003", "원자간력현미경(AFM)", "현미경", "AFM", "1동 105호", "available", "박지훈"),
+        eq("EQ004", "광학현미경", "현미경", "Optical", "1동 107호", "available", "최유진"),
+        eq("EQ005", "X-선 회절분석기(XRD)", "분석·측정", "XRD", "2동 201호", "available", "정민석"),
+        eq("EQ006", "라만 분광기", "분석·측정", "Raman", "2동 203호", "available", "강하늘"),
+        eq("EQ007", "UV-Vis 분광광도계", "분석·측정", "UV-Vis", "2동 205호", "available", "윤서연"),
+        eq("EQ008", "엘립소미터(박막두께측정)", "분석·측정", "Ellipsometer", "2동 207호", "maintenance", "조태현"),
+        eq("EQ009", "표면조도측정기(Profilometer)", "분석·측정", "Profilometer", "2동 209호", "available", "한지원"),
+        eq("EQ010", "RF 마그네트론 스퍼터", "증착", "Sputter", "3동 B101", "available", "임재호"),
+        eq("EQ011", "전자빔 증착장비(E-beam Evaporator)", "증착", "E-beam", "3동 B103", "available", "오세영"),
+        eq("EQ012", "PECVD 박막증착장비", "증착", "PECVD", "3동 B105", "available", "신동욱"),
+        eq("EQ013", "반응성이온식각장비(RIE)", "식각", "RIE", "3동 B107", "available", "권나래"),
+        eq("EQ014", "마스크 얼라이너(노광장비)", "리소그래피", "Aligner", "3동 B109", "available", "배성훈"),
+        eq("EQ015", "스핀코터", "리소그래피", "Spin Coater", "3동 B109", "available", "배성훈"),
+        eq("EQ016", "급속열처리장비(RTA)", "열처리", "RTA", "3동 B111", "available", "문가영"),
       ],
       users: [
         usr("U001", "관리자", "0000", "admin"),
